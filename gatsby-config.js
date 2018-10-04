@@ -5,7 +5,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'gatsby-starter-default',
         short_name: 'colw.io',
@@ -17,6 +17,21 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: './src/content',
+        name: 'markdown-pages',
+      },
+    },
+    'gatsby-transformer-remark',
     'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: './src/data/',
+      },
+    },
+    'gatsby-transformer-yaml',
   ],
 }

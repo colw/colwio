@@ -24,10 +24,18 @@ const ContentWrapper = styled.div`
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
+      query HeaderDataQuery {
         site {
           siteMetadata {
             title
+          }
+        }
+        allLinksYaml {
+          edges {
+            node {
+              title
+              link
+            }
           }
         }
       }
@@ -43,7 +51,7 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title} links={data.allLinksYaml.edges.map(x => x.node)} />
         <ContentWrapper>{children}</ContentWrapper>
       </>
     )}

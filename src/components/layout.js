@@ -26,7 +26,7 @@ injectGlobal`
   }
 
   li {
-    /* margin-bottom: 1rem; */
+    margin-bottom: 1rem;
   }
 
   footer {

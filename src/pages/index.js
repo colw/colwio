@@ -11,33 +11,36 @@ const IndexPage = ({ data: { aboutData, projectData } }) => {
   } = aboutData.edges[0]
   const projects = projectData.edges.map(x => x.node)
 
-  return (
-    <Layout>
+  return <Layout>
       <section dangerouslySetInnerHTML={{ __html: aboutHtml }} />
       <h2>Recent Projects</h2>
-        {projects.map((x, i) => (
-          <div key={i}>
-            <Project {...x} />
-          </div>
-        ))}
+      {projects.map((x, i) => <div key={i}>
+          <Project {...x} />
+        </div>)}
       <h2>Open Source</h2>
       <ul>
         <li>
-          <a href="https://github.com/colw/cowpat">React based News Feed</a>
+          <a href="https://github.com/colw/cowpat" aria-label="Twitter">
+            React based News Feed
+          </a>
         </li>
         <li>
-          <a href="https://github.com/colw/ruminator">Node.js RSS Aggregator</a>
+          <a href="https://github.com/colw/ruminator" aria-label="ruminator">
+            Node.js RSS Aggregator
+          </a>
         </li>
         <li>
-          <a href="https://github.com/colw/react-cw-header">react-cw-header</a>
+        <a href="https://github.com/colw/react-cw-header" aria-label="react-cw-header">
+            react-cw-header
+          </a>
         </li>
         <li>
-          <a href="https://github.com/colw/spotthestation-rss-reader">
+        <a href="https://github.com/colw/spotthestation-rss-reader" aria-label="NASA SpotTheStation RSS Reader">
             NASA SpotTheStation RSS Reader
           </a>
         </li>
         <li>
-          <a href="https://github.com/colw/spotthestation-ics-creator">
+        <a href="https://github.com/colw/spotthestation-ics-creator" aria-label="NASA SpotTheStation ICS Creator">
             NASA SpotTheStation ICS Creator
           </a>
         </li>
@@ -58,7 +61,6 @@ const IndexPage = ({ data: { aboutData, projectData } }) => {
       </ul>
       <footer>© 2018 Col</footer>
     </Layout>
-  )
 }
 
 export default IndexPage

@@ -30,10 +30,7 @@ const IconWrapper = styled.div`
 
 const Icon = ({ title, link, icon }) => (
   <IconWrapper>
-    {/* <a href={link}>
-      <FontAwesomeIcon icon={icon.split(' ')} />
-    </a> */}
-    <a href={link}>
+    <a href={link} aria-label={title}>
       <FontAwesomeIcon icon={icon.split(' ')} />
     </a>
   </IconWrapper>

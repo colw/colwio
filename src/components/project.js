@@ -19,8 +19,8 @@ const ProjectContainer = styled.div`
 
 const Project = ({ title, link, image, text }) => (
   <ProjectContainer>
-    <a href={link}>{title}</a>
-    <a href={link}>
+    <a href={link} aria-label={title}>{title}</a>
+    <a href={link} aria-label={title}>
       <ProjectImage src={image} alt="" />
     </a>
     <p>{text}</p>

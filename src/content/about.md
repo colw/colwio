@@ -6,4 +6,4 @@ title: "About"
 
 React, Angular, Node.js.
 
-Available for freelance work - [contact me](col@colw.io).
+Available for freelance work - [contact me](mailto:col@colw.io).

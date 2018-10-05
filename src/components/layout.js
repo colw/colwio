@@ -11,12 +11,33 @@ import Header from './header'
 injectGlobal`
   html {
     font-family: Raleway, sans-serif;
+    font-size: 100%;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-weight: 300;
+    font-size: 42px;
+  }
+  a {
+    color: rgb(30, 174, 219);
+    text-decoration: none;
+  }
+
+  li {
+    /* margin-bottom: 1rem; */
+  }
+
+  footer {
+    margin: 2rem
+    text-align: center;
   }
 `
 
 const ContentWrapper = styled.div`
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 720px;
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 0;
 `
@@ -35,6 +56,7 @@ const Layout = ({ children }) => (
             node {
               title
               link
+              icon
             }
           }
         }

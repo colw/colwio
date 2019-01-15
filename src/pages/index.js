@@ -5,12 +5,12 @@ import Layout from '../components/layout'
 import Project from '../components/project'
 
 
-const IndexPage = ({ data: { aboutData, projectData } }) => {
+const IndexPage = ({ data: { aboutData, projectData, skillsData } }) => {
   const {
     node: { html: aboutHtml },
   } = aboutData.edges[0]
   const projects = projectData.edges.map(x => x.node)
-
+  const skills = skillsData.edges.map(x => x.node.skill)
   return <Layout>
       <section dangerouslySetInnerHTML={{ __html: aboutHtml }} />
       <h2>Recent Projects</h2>
@@ -48,16 +48,7 @@ const IndexPage = ({ data: { aboutData, projectData } }) => {
       <h2>Skills</h2>
       <p>I use the following technologies:</p>
       <ul>
-        <li>Javascript</li>
-        <li>React, React-Native</li>
-        <li>Angular</li>
-        <li>HTML5</li>
-        <li>SASS/CSS</li>
-        <li>PHP</li>
-        <li>Bolt CMS</li>
-        <li>WordPress</li>
-        <li>Redis</li>
-        <li>MongoDB</li>
+        {skills.map(x => <li key={x}>{x}</li>)}
       </ul>
       <footer>© 2018 Col</footer>
     </Layout>
@@ -87,6 +78,13 @@ export const query = graphql`
           link
           image
           text
+        }
+      }
+    }
+    skillsData: allSkillsYaml {
+      edges {
+        node {
+          skill
         }
       }
     }

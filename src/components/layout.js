@@ -12,6 +12,7 @@ injectGlobal`
   html {
     font-family: Raleway, sans-serif;
     font-size: 100%;
+    line-height: 150%;
   }
   h1 {
     font-size: 5rem;
@@ -49,6 +50,7 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            subTitle
           }
         }
         allLinksYaml {
@@ -73,7 +75,11 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} links={data.allLinksYaml.edges.map(x => x.node)} />
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          subTitle={data.site.siteMetadata.subTitle}
+          links={data.allLinksYaml.edges.map(x => x.node)}
+        />
         <ContentWrapper>{children}</ContentWrapper>
       </>
     )}

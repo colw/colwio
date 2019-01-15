@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'colw.io',
+    subTitle: 'Freelance Software Developer',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

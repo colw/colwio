@@ -19,7 +19,6 @@ const HeaderWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 `
 
 const IconWrapper = styled.div`
@@ -42,17 +41,24 @@ const MainTitle = styled.h1`
   display: inline-block;
   font-weight: 300;
   font-size: 3.5rem;
-  line-height: 3.5rem;
   a {
     text-decoration: none;
     color: black;
   }
 `
 
+const SubTitle = styled.small`
+  margin-top: 2rem;
+  display: inline-block;
+  font-weight: 200;
+  font-size: 1.4rem;
+  opacity: 0.7;
+`
+
 const HeaderList = styled.ul`
   padding: 0;
   margin: 0;
-  display: inline-block;
+  display: flex;
   li {
     display: inline-block;
     padding-right: 1rem;
@@ -65,13 +71,14 @@ const HeaderList = styled.ul`
   }
 `
 
-const Header = ({ siteTitle, links }) => {
+const Header = ({ siteTitle, subTitle, links }) => {
   return (
     <HeaderWrapper>
         <MainTitle>
           <Link to="/">
             {siteTitle}
-          </Link>
+        </Link><br />
+        <SubTitle>{subTitle}</SubTitle>
         </MainTitle>
         <HeaderList>
           {links.map(x => <li key={x.title}><Icon {...x} /></li>)}

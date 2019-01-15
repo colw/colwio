@@ -17,34 +17,6 @@ const IndexPage = ({ data: { aboutData, projectData, skillsData } }) => {
       {projects.map((x, i) => <div key={i}>
           <Project {...x} />
         </div>)}
-      <h2>Open Source</h2>
-      <ul>
-        <li>
-          <a href="https://github.com/colw/cowpat" aria-label="Twitter">
-            React based News Feed
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/colw/ruminator" aria-label="ruminator">
-            Node.js RSS Aggregator
-          </a>
-        </li>
-        <li>
-        <a href="https://github.com/colw/react-cw-header" aria-label="react-cw-header">
-            react-cw-header
-          </a>
-        </li>
-        <li>
-        <a href="https://github.com/colw/spotthestation-rss-reader" aria-label="NASA SpotTheStation RSS Reader">
-            NASA SpotTheStation RSS Reader
-          </a>
-        </li>
-        <li>
-        <a href="https://github.com/colw/spotthestation-ics-creator" aria-label="NASA SpotTheStation ICS Creator">
-            NASA SpotTheStation ICS Creator
-          </a>
-        </li>
-      </ul>
       <h2>Skills</h2>
       <p>I use the following technologies:</p>
       <ul>

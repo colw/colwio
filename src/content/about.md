@@ -2,8 +2,8 @@
 title: "About"
 --- 
 
-**My name is Col**. I am a full stack web developer, specialising in Javascript.
+**My name is Col**. I craft professional web interfaces using React.
 
-React, Angular, Node.js.
+I have a degree in Computer Science, and I specialise in Javascript. I regularly use technologies like Git, Docker and CircleCI to assist in my work.
 
-Available for freelance work - [contact me](mailto:col@colw.io).
+Please [contact me](mailto:col@colw.io) to talk about your project.

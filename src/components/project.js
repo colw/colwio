@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import LazyLoad from 'react-lazyload'
 
 const ProjectImage = styled.img`
   max-width: 100%;
@@ -21,7 +22,9 @@ const Project = ({ title, link, image, text }) => (
   <ProjectContainer>
     <a href={link} aria-label={title}>{title}</a>
     <a href={link} aria-label={title}>
-      <ProjectImage src={image} alt="" />
+      <LazyLoad height={350} offset={100} once>
+        <ProjectImage src={image} alt="" />
+      </LazyLoad>
     </a>
     <p>{text}</p>
   </ProjectContainer>

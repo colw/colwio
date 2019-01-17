@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'colw.io',
+    title: 'colw',
     subTitle: 'Freelance Software Developer',
   },
   plugins: [

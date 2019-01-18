@@ -18,9 +18,26 @@ const ProjectContainer = styled.div`
   }
 `
 
-const Project = ({ title, link, image, text }) => (
+
+const ProjectName = styled.a`
+  font-size: 1.4rem;
+`
+
+const Year = styled.small`
+  margin-top: 2rem;
+  display: inline-block;
+  font-weight: 200;
+  font-size: 1rem;
+  opacity: 0.7;
+  padding-left: 0.5rem;
+`
+
+const Project = ({ title, link, image, text, year }) => (
   <ProjectContainer>
-    <a href={link} aria-label={title}>{title}</a>
+    <ProjectName href={link} aria-label={title}>
+      {title}
+    </ProjectName>{' '}
+    {year && <Year>{year}</Year>}
     <a href={link} aria-label={title}>
       <LazyLoad height={350} offset={100} once>
         <ProjectImage src={image} alt="" />

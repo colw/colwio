@@ -1,29 +1,30 @@
 backend:
   name: github
   repo: colw/colwio
-media_folder: "images"
+  branch: netlify-cms-support
+media_folder: ""
 collections:
   - label: "Pages"
-    name: "ages"
+    name: "pages"
     files:
-      - label: "projects"
-        file: "src/data/projects.yml"
-        name: Projects
+      - label: "Projects"
+        name: "projects"
+        file: "data/projects.yml"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Link, name: link, widget: string}
-          - {label: Image, name: image, widget: string}
-          - {label: Text, name: text, widget: string}
-          - {label: Year, name: year, widget: string}
-      - label: "skills"
-        file: "src/data/skills.yml"
-        name: Skills
+          - {label: "Title", name: "title", "widget": "string"}
+          - {label: "Link", name: "link", "widget": "string"}
+          - {label: "Image", name: "image", "widget": "string"}
+          - {label: "Text", name: "text", "widget": "string"}
+          - {label: "Year", name: "year", "widget": "string"}
+      - label: "Skills"
+        name: "skills"
+        file: "data/skills.yml"
         fields:
-          - {label: Skill, name: skill, widget: string}
-      - label: "links"
-        file: "src/data/links.yml"
-        name: Links
+          - {label: "Skill", name: "skill", "widget": "string"}
+      - label: "Links"
+        name: "links"
+        file: "data/links.yml"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Link, name: link, widget: string}
-          - {label: Icon, name: icon, widget: string}
+          - {label: "Title", name: "title", "widget": "string"}
+          - {label: "Link", name: "link", "widget": "string"}
+          - {label: "Icon", name: "icon", "widget": "string"}

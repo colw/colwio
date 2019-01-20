@@ -81,7 +81,19 @@ const Layout = ({ children }) => (
           subTitle={data.site.siteMetadata.subTitle}
           links={data.allLinksYaml.edges.map(x => x.node)}
         />
-        <ContentWrapper>{children}</ContentWrapper>
+          <ContentWrapper>{children}</ContentWrapper>
+          <script>
+            {if (window.netlifyIdentity) {
+              window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                  window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                  });
+                }
+              });
+            }
+            }
+</script>
       </>
     )}
   />

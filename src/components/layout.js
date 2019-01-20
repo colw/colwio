@@ -74,6 +74,7 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
+          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </Helmet>
         <Header
           siteTitle={data.site.siteMetadata.title}

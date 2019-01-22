@@ -52,6 +52,10 @@ const Layout = ({ children }) => (
             node {
               title
               subTitle
+              meta {
+                name
+                content
+              }
               links {
                 icon
                 link
@@ -66,17 +70,7 @@ const Layout = ({ children }) => (
       <>
         <Helmet
           title={data.allDataYaml.edges[0].node.title}
-          meta={[
-            {
-              name: 'description',
-              content: 'colw.io freelance developer site',
-            },
-            {
-              name: 'keywords',
-              content:
-                'developer, react, software, freelancer, javascript, work, jobs',
-            },
-          ]}
+          meta={data.allDataYaml.edges[0].node.meta}
         >
           <html lang="en" />
           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />

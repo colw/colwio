@@ -1,5 +1,10 @@
 title: 'Col'
 subTitle: 'Freelance Software Developer'
+meta:
+  - name: 'description'
+    content: 'colw.io freelance developer site'
+  - name: 'keywords'
+    content: 'developer, react, software, freelancer, javascript, work, jobs'
 links:
   - icon: 'fa pen-square'
     link: 'https://colw.github.io/'

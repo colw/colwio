@@ -34,7 +34,7 @@ collections:
         fields:
           - label: Skill
             name: skill
-            widget: "list"
+            widget: "object"
             field:
               label: "Skilltype"
               name: "skilltype"

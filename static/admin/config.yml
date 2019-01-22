@@ -35,6 +35,7 @@ collections:
         fields:
           - label: Skill
             name: skill
+            widget: "list"
             field:
               name: skillname
               widget: "string"

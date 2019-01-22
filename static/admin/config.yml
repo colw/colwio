@@ -29,13 +29,16 @@ collections:
           - {label: "Text", name: "text", widget: "string"}
           - {label: "Year", name: "year", widget: "string"}
       - file: "src/data/skills.yaml"
-        label: "Skills"
+        label: "Skill Set"
         name: "skills"
-        widget: "list"
         fields:
           - label: Skill
             name: skill
-            widget: "string"
+            widget: "list"
+            field:
+              label: "Skilltype"
+              name: "skilltype"
+              widget: "string"
       - file: "src/data/links.yaml"
         label: "Links"
         name: "links"

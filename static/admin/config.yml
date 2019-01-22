@@ -32,7 +32,6 @@ collections:
         label: "Skills"
         name: "skills"
         widget: "list"
-        field: {label: "Skill", name: "skill", widget: "string"}
       - file: "src/data/links.yaml"
         label: "Links"
         name: "links"

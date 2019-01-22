@@ -13,29 +13,29 @@ collections:
         label: "About"
         name: "about"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Title"", name: "title", widget: "string"}
+          - {label: "Body"", name: "body", widget: "markdown"}
   - name: "data"
     label: "Data"
     files:
       - file: "src/data/projects.yaml"
-        label: "projects"
-        name: Projects
+        label: "Projects"
+        name: "projects"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Link, name: link, widget: string}
-          - {label: Image, name: image, widget: string}
-          - {label: Text, name: text, widget: string}
-          - {label: Year, name: year, widget: string}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Link", name: "link", widget: "string"}
+          - {label: "Image", name: "image", widget: "string"}
+          - {label: "Text", name: "text", widget: "string"}
+          - {label: "Year", name: "year", widget: "string"}
       - file: "src/data/skills.yaml"
-        label: "skills"
-        name: Skills
+        label: "Skills"
+        name: "skills"
         fields:
-          - {label: Skill, name: skill, widget: string}
+          - {label: "Skill", name: "skill", widget: "string"}
       - file: "src/data/links.yaml"
-        label: "links"
-        name: Links
+        label: "Links"
+        name: "links"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Link, name: link, widget: string}
-          - {label: Icon, name: icon, widget: string}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Link", name: "link", widget: "string"}
+          - {label: "Icon", name: "icon", widget: "string"}

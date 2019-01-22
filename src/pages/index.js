@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Project from '../components/project'
 
-const IndexPage = ({ data: { aboutData, projectData, skillsData } }) => {
+const IndexPage = ({ data: { aboutData, projectData } }) => {
   const {
     node: { html: aboutHtml },
   } = aboutData.edges[0]

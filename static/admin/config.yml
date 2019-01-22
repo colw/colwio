@@ -38,7 +38,7 @@ collections:
             widget: "list"
             field:
               name: skillname
-              widget: "string"
+              widget: "object"
       - file: "src/data/links.yaml"
         label: "Links"
         name: "links"

@@ -73,7 +73,6 @@ const Layout = ({ children }) => (
           meta={data.allDataYaml.edges[0].node.meta}
         >
           <html lang="en" />
-          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </Helmet>
         <Header
           siteTitle={data.allDataYaml.edges[0].node.title}

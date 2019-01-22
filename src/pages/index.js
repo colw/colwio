@@ -4,26 +4,31 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Project from '../components/project'
 
-
 const IndexPage = ({ data: { aboutData, projectData, skillsData } }) => {
   const {
     node: { html: aboutHtml },
   } = aboutData.edges[0]
-  const projects = projectData.edges.map(x => x.node)
-  const skills = skillsData.edges.map(x => x.node.skill)[0]
-  return <Layout>
+  const projects = projectData.edges[0].node.projects
+  const skills = projectData.edges[0].node.skills
+  return (
+    <Layout>
       <section dangerouslySetInnerHTML={{ __html: aboutHtml }} />
       <h2>Recent Projects</h2>
-      {projects.map((x, i) => <div key={i}>
+      {projects.map((x, i) => (
+        <div key={i}>
           <Project {...x} />
-        </div>)}
+        </div>
+      ))}
       <h2>Skills</h2>
       <p>I use the following technologies:</p>
       <ul>
-        {skills.map(x => <li key={x}>{x}</li>)}
+        {skills.map(x => (
+          <li key={x}>{x}</li>
+        ))}
       </ul>
       <footer>© 2018 Col</footer>
     </Layout>
+  )
 }
 
 export default IndexPage
@@ -43,21 +48,17 @@ export const query = graphql`
         }
       }
     }
-    projectData: allProjectsYaml {
+    projectData: allDataYaml {
       edges {
         node {
-          title
-          link
-          image
-          text
-          year
-        }
-      }
-    }
-    skillsData: allDataYaml {
-      edges {
-        node {
-          skill
+          projects {
+            image
+            link
+            text
+            title
+            year
+          }
+          skills
         }
       }
     }

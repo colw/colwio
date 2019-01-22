@@ -1,21 +1,54 @@
-title: Col
-subTitle: Freelance Software Developer
+title: 'Col'
+subTitle: 'Freelance Software Developer'
 links:
-  - icon: fa pen-square
+  - icon: 'fa pen-square'
     link: 'https://colw.github.io/'
-    title: Blog
-  - icon: fab github
+    title: 'Blog'
+  - icon: 'fab github'
     link: 'https://www.github.com/colw'
-    title: Github
-  - icon: fa envelope
+    title: 'Github'
+  - icon: 'fa envelope'
     link: 'mailto:col@colw.io'
-    title: Email
+    title: 'Email'
 projects:
-  - image: 'https://raw.githubusercontent.com/colw/images/master/dstoq.png'
+  - title: 'DSTOQ Marketing Website'
     link: 'http://www.dstoq.com'
-    text: A Gatsby.js powered static site
-    title: DSTOQ Marketing Website
+    image: 'https://raw.githubusercontent.com/colw/images/master/dstoq.png'
+    text: 'A Gatsby.js powered static site'
     year: '2018'
+  - title: 'ErgoERGO B2B Site'
+    link: 'http://www.ergo.de'
+    image: 'https://raw.githubusercontent.com/colw/images/master/ergo.png'
+    text: 'A B2B SPA built out of React for the ERGO Insurance company.'
+    year: '2017–2018'
+  - title: 'Lesara'
+    link: 'http://corporate.lesara.com'
+    image: 'https://raw.githubusercontent.com/colw/images/master/lesara.png'
+    text: >
+      The official corporate site for Europe's premier online fashion retailer.
+    year: '2016'
+  - title: 'Triptello'
+    link: 'http://www.triptello.com'
+    image: 'https://raw.githubusercontent.com/colw/images/master/triptello.png'
+    text: 'A digital travel agency. Front end completed using Angular and Bootstrap.'
+    year: '2015–2016'
+  - title: 'Ruminant'
+    link: 'http://ruminant.press'
+    image: 'https://raw.githubusercontent.com/colw/images/master/ruminant_ipad.png'
+    text: 'A news aggregator built using React and Node.js.'
+    year: '2015'
+  - title: 'Lamedo'
+    link: 'https://www.facebook.com/lighthouseapp'
+    image: 'https://raw.githubusercontent.com/colw/images/master/lighthouse.png'
+    text: 'An allergy food scanning app. Prototype created using the Ionic Framework.'
+    year: '2015'    
 skills:
-  - Javascript
-  - React
+  - 'Javascript, ES6'
+  - 'React, Redux'
+  - 'HTML5'
+  - 'Styled-Components, SASS, CSS'
+  - 'Git + Github'
+  - 'CircleCI, Jenkins'
+  - 'Docker'
+  - 'AWS, Netlify'
+  - 'Firebase'

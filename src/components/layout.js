@@ -47,18 +47,16 @@ const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query HeaderDataQuery {
-        site {
-          siteMetadata {
-            title
-            subTitle
-          }
-        }
-        allLinksYaml {
+        allDataYaml {
           edges {
             node {
               title
-              link
-              icon
+              subTitle
+              links {
+                icon
+                link
+                title
+              }
             }
           }
         }
@@ -67,19 +65,26 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Helmet
-          title={data.site.siteMetadata.title}
+          title={data.allDataYaml.edges[0].node.title}
           meta={[
-            { name: 'description', content: 'colw.io freelance developer site' },
-            { name: 'keywords', content: 'developer, react, software, freelancer, javascript, work, jobs' },
+            {
+              name: 'description',
+              content: 'colw.io freelance developer site',
+            },
+            {
+              name: 'keywords',
+              content:
+                'developer, react, software, freelancer, javascript, work, jobs',
+            },
           ]}
         >
           <html lang="en" />
           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </Helmet>
         <Header
-          siteTitle={data.site.siteMetadata.title}
-          subTitle={data.site.siteMetadata.subTitle}
-          links={data.allLinksYaml.edges.map(x => x.node)}
+          siteTitle={data.allDataYaml.edges[0].node.title}
+          subTitle={data.allDataYaml.edges[0].node.subTitle}
+          links={data.allDataYaml.edges[0].node.links}
         />
         <ContentWrapper>{children}</ContentWrapper>
       </>

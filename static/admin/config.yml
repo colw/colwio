@@ -33,10 +33,11 @@ collections:
         name: "skills"
         widget: "list"
         fields:
-          label: Field
-          field:
-            name: skillname
-            widget: "string"
+          - label: Skill
+            name: skill
+            field:
+              name: skillname
+              widget: "string"
       - file: "src/data/links.yaml"
         label: "Links"
         name: "links"

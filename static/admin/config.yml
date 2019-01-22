@@ -21,6 +21,7 @@ collections:
       - file: "src/data/projects.yaml"
         label: "Projects"
         name: "projects"
+        widget: "list"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Link", name: "link", widget: "string"}
@@ -30,11 +31,13 @@ collections:
       - file: "src/data/skills.yaml"
         label: "Skills"
         name: "skills"
+        widget: "list"
         fields:
           - {label: "Skill", name: "skill", widget: "string"}
       - file: "src/data/links.yaml"
         label: "Links"
         name: "links"
+        widget: "list"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Link", name: "link", widget: "string"}

@@ -15,3 +15,27 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+  - name: "data"
+    label: "Data"
+    files:
+      - label: "projects"
+        file: "src/data/projects.yml"
+        name: Projects
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Link, name: link, widget: string}
+          - {label: Image, name: image, widget: string}
+          - {label: Text, name: text, widget: string}
+          - {label: Year, name: year, widget: string}
+      - label: "skills"
+        file: "src/data/skills.yml"
+        name: Skills
+        fields:
+          - {label: Skill, name: skill, widget: string}
+      - label: "links"
+        file: "src/data/links.yml"
+        name: Links
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Link, name: link, widget: string}
+          - {label: Icon, name: icon, widget: string}

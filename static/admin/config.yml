@@ -13,8 +13,8 @@ collections:
         label: "About"
         name: "about"
         fields:
-          - {label: "Title"", name: "title", widget: "string"}
-          - {label: "Body"", name: "body", widget: "markdown"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
   - name: "data"
     label: "Data"
     files:

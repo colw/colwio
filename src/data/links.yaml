@@ -1,7 +1,9 @@
-linkitem:
-  - icon: iconstring
-    link: linkstring
-    title: titlestring
-  - icon: iconsstring2
-    link: linkstring 2
-    title: titlstring2
+- title: "Blog"
+  link: "https://colw.github.io/"
+  icon: "fa pen-square"
+- title: "Github"
+  link: "https://www.github.com/colw"
+  icon: "fab github"
+- title: "Email"
+  link: "mailto:col@colw.io"
+  icon: "fa envelope"

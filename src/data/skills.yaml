@@ -1,9 +1,10 @@
-- skill: Javascript, ES6
-- skill: React, Redux
-- skill: HTML5
-- skill: Styled-Components, SASS/CSS
-- skill: Git + Github
-- skill: CircleCI, Jenkins
-- skill: Docker
-- skill: AWS, Netlify
-- skill: Firebase
+skill: [
+  "Javascript, ES6",
+  "React, Redux",
+  "HTML5", "Styled-Components, SASS/CSS",
+  "Git + Github",
+  "CircleCI, Jenkins",
+  "Docker",
+  "AWS, Netlify",
+  "Firebase"
+]

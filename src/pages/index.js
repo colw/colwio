@@ -10,7 +10,7 @@ const IndexPage = ({ data: { aboutData, projectData, skillsData } }) => {
     node: { html: aboutHtml },
   } = aboutData.edges[0]
   const projects = projectData.edges.map(x => x.node)
-  const skills = skillsData.edges.map(x => x.node.skill)
+  const skills = skillsData.edges.map(x => x.node.skill)[0]
   return <Layout>
       <section dangerouslySetInnerHTML={{ __html: aboutHtml }} />
       <h2>Recent Projects</h2>
@@ -54,7 +54,7 @@ export const query = graphql`
         }
       }
     }
-    skillsData: allSkillsYaml {
+    skillsData: allDataYaml {
       edges {
         node {
           skill

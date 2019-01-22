@@ -8,8 +8,7 @@ const IndexPage = ({ data: { aboutData, projectData } }) => {
   const {
     node: { html: aboutHtml },
   } = aboutData.edges[0]
-  const projects = projectData.edges[0].node.projects
-  const skills = projectData.edges[0].node.skills
+  const { footer, projects, skills } = projectData.edges[0].node
   return (
     <Layout>
       <section dangerouslySetInnerHTML={{ __html: aboutHtml }} />
@@ -26,7 +25,7 @@ const IndexPage = ({ data: { aboutData, projectData } }) => {
           <li key={x}>{x}</li>
         ))}
       </ul>
-      <footer>© 2018 Col</footer>
+      <footer>{footer}</footer>
     </Layout>
   )
 }
@@ -51,6 +50,7 @@ export const query = graphql`
     projectData: allDataYaml {
       edges {
         node {
+          footer
           projects {
             image
             link

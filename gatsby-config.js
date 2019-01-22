@@ -1,8 +1,5 @@
 module.exports = {
-  siteMetadata: {
-    title: 'Col',
-    subTitle: 'Freelance Software Developer',
-  },
+  siteMetadata: {},
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify-cms',

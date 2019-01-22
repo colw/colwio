@@ -6,8 +6,8 @@ media_folder: "static/images"
 public_folder: "/images"
 
 collections:
-  - name: "pages"
-    label: "Derps"
+  - name: "info"
+    label: "Info"
     files:
       - file: "src/content/about.md"
         label: "About"
@@ -15,9 +15,6 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-  - name: "data"
-    label: "Data"
-    files:
       - file: "src/data/projects.yaml"
         label: "Projects"
         name: "projects"

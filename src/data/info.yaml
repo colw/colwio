@@ -17,6 +17,11 @@ links:
     link: 'mailto:col@colw.io'
     title: Email
 projects:
+  - image: 'https://raw.githubusercontent.com/colw/images/master/localsolardeals.png'
+    link: 'https://localsolardeals.com.au/'
+    text: Responsive landing Page created with Gatsby.
+    title: LocalSolarDeals
+    year: '2019'
   - image: 'https://raw.githubusercontent.com/colw/images/master/dstoq.png'
     link: 'http://www.dstoq.com'
     text: A Gatsby.js powered static site

@@ -22,7 +22,7 @@ projects:
     image: 'https://raw.githubusercontent.com/colw/images/master/dstoq.png'
     text: 'A Gatsby.js powered static site'
     year: '2018'
-  - title: 'ErgoERGO B2B Site'
+  - title: 'ERGO B2B Site'
     link: 'http://www.ergo.de'
     image: 'https://raw.githubusercontent.com/colw/images/master/ergo.png'
     text: 'A B2B SPA built out of React for the ERGO Insurance company.'

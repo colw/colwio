@@ -34,18 +34,11 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    aboutData: allMarkdownRemark(
-      filter: { frontmatter: { title: { eq: "About" } } }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-          }
-          html
-        }
+    aboutData: markdownRemark {
+      frontmatter {
+        title
       }
+      html
     }
     projectData: allDataYaml {
       edges {

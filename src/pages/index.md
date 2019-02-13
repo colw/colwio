@@ -31,7 +31,9 @@ projects:
     year: '2018'
   - image: images/ergo.png
     link: 'http://www.ergo.de'
-    text: A B2B SPA built out of React for the ERGO Insurance company.
+    text: >-
+      A B2B SPA built out of React for the ERGO Insurance company. *This site is
+      not public.
     title: ERGO B2B Site
     year: 2017–2018
   - image: images/lesara.png

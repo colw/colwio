@@ -29,8 +29,8 @@ projects:
     year: '2018'
   - image: 'https://raw.githubusercontent.com/colw/images/master/ergo.png'
     link: 'http://www.ergo.de'
-    text: A B2B SPA built out of React for the ERGO Insurance company.
-    title: 'ERGO B2B Site'
+    text: A B2B SPA built out of React+Redux for the ERGO Insurance company.
+    title: ERGO B2B Site
     year: 2017–2018
   - image: 'https://raw.githubusercontent.com/colw/images/master/lesara.png'
     link: 'http://corporate.lesara.com'

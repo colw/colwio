@@ -4,14 +4,11 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Project from '../components/project'
 
-const IndexPage = ({ data: { aboutData, projectData } }) => {
-  const {
-    node: { html: aboutHtml },
-  } = aboutData.edges[0]
-  const { footer, projects, skills } = projectData.edges[0].node
+const IndexPage = ({ data }) => {
+  const { footer, projects, skills } = data.projectData.edges[0].node
   return (
     <Layout>
-      <section dangerouslySetInnerHTML={{ __html: aboutHtml }} />
+      <section dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       <h2>Recent Projects</h2>
       {projects.map((x, i) => (
         <div key={i}>
@@ -34,7 +31,7 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    aboutData: markdownRemark {
+    markdownRemark {
       frontmatter {
         title
       }

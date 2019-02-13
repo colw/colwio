@@ -9,13 +9,7 @@ collections:
   - name: "info"
     label: "Info"
     files:
-      - file: "src/content/about.md"
-        label: "About"
-        name: "about"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/data/info.yaml"
+      - file: "src/pages/index.md"
         label: "Info Data"
         name: "infos"
         fields:
@@ -25,5 +19,6 @@ collections:
           - {label: Meta, name: meta, widget: list, fields: [{label: Name, name: name, widget: string}, {label: Content, name: content, widget: string}]}
           - {label: Footer, name: footer, widget: string}
           - {label: Links, name: links, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Link, name: link, widget: string}, {label: Icon, name: icon, widget: string}]}
-          - {label: Projects, name: projects, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Link, name: link, widget: string}, {label: Image, name: image, widget: string}, {label: Text, name: text, widget: string}, {label: Year, name: year, widget: string}]}
+          - {label: Projects, name: projects, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Link, name: link, widget: string}, {label: Image, name: image, widget: image}, {label: Text, name: text, widget: string}, {label: Year, name: year, widget: string}]}
           - {label: Skills, name: skills, widget: list, field: {label: skilltype, name: skilltype, widget: string}}
+          - {label: "Body", name: "body", widget: "markdown"}

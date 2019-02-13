@@ -17,20 +17,37 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        path: './src/content',
-        name: 'markdown-pages',
-      },
-    },
-    'gatsby-transformer-remark',
-    'gatsby-plugin-styled-components',
+        path: `${__dirname}/src/pages`,
+        name: "pages"
+      }
+    },    
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        path: './src/data/',
-      },
+        path: `${__dirname}/src/pages/images`,
+        name: "images"
+      }
     },
-    'gatsby-transformer-yaml',
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 2048
+            }
+          }
+        ]
+      }
+    },
+    'gatsby-plugin-styled-components',
   ],
 }

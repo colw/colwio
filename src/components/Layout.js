@@ -2,13 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import styled, { injectGlobal } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import 'typeface-raleway'
-import 'sanitize.css'
+import sanitize from '../style'
 
-import Header from './header'
+import Header from './Header'
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
+  ${sanitize}
   html {
     font-family: Raleway, sans-serif;
     font-size: 100%;
@@ -34,6 +35,11 @@ injectGlobal`
     margin: 2rem
     text-align: center;
   }
+
+  .page-wrapper {
+    margin: 0 auto;
+    max-width: 1350px;
+  }
 `
 
 const ContentWrapper = styled.div`
@@ -47,20 +53,19 @@ const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query HeaderDataQuery {
-        allDataYaml {
-          edges {
-            node {
+        markdownRemark {
+          id
+          frontmatter {
+            title
+            subTitle
+            meta {
+              name
+              content
+            }
+            links {
+              icon
+              link
               title
-              subTitle
-              meta {
-                name
-                content
-              }
-              links {
-                icon
-                link
-                title
-              }
             }
           }
         }
@@ -69,16 +74,17 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Helmet
-          title={data.allDataYaml.edges[0].node.title}
-          meta={data.allDataYaml.edges[0].node.meta}
+          title={data.markdownRemark.frontmatter.title}
+          meta={data.markdownRemark.frontmatter.meta}
         >
           <html lang="en" />
         </Helmet>
         <Header
-          siteTitle={data.allDataYaml.edges[0].node.title}
-          subTitle={data.allDataYaml.edges[0].node.subTitle}
-          links={data.allDataYaml.edges[0].node.links}
+          siteTitle={data.markdownRemark.frontmatter.title}
+          subTitle={data.markdownRemark.frontmatter.subTitle}
+          links={data.markdownRemark.frontmatter.links}
         />
+        <GlobalStyle />
         <ContentWrapper>{children}</ContentWrapper>
       </>
     )}

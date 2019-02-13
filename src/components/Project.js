@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import LazyLoad from 'react-lazyload'
+import Image from 'gatsby-image'
 
-const ProjectImage = styled.img`
+const ProjectImage = styled(Image)`
   max-width: 100%;
   max-height: 350px;
   box-shadow: 0px 1px 3px 1px #ccc;
@@ -18,7 +18,6 @@ const ProjectContainer = styled.div`
   }
 `
 
-
 const ProjectName = styled.a`
   font-size: 1.4rem;
 `
@@ -32,19 +31,24 @@ const Year = styled.small`
   padding-left: 0.5rem;
 `
 
-const Project = ({ title, link, image, text, year }) => (
-  <ProjectContainer>
+// Kludge so the images are not alignedin the center when scaling.
+const alignTop = `
+  img { object-position: top center !important; }
+`
+
+const Project = ({ title, link, image, text, year }) => {
+  return (<ProjectContainer>
     <ProjectName href={link} aria-label={title}>
       {title}
     </ProjectName>{' '}
     {year && <Year>{year}</Year>}
     <a href={link} aria-label={title}>
-      <LazyLoad height={350} offset={100} once>
-        <ProjectImage src={image} alt="" />
-      </LazyLoad>
+      <ProjectImage css={alignTop} fluid={image.childImageSharp.fluid} alt={text} />
     </a>
     <p>{text}</p>
   </ProjectContainer>
-)
+  );
+
+}
 
 export default Project

@@ -11,7 +11,7 @@ const ProjectImage = styled(Image)`
 `
 
 const ProjectContainer = styled.div`
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
   width: 100%;
   a {
     text-decoration: none;

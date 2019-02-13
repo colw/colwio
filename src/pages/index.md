@@ -1,75 +1,75 @@
 ---
 templateKey: main-page
-path: /main
-title: 'Col'
-subTitle: 'Freelance Software Developer'
+title: Col
+subTitle: Freelance Software Developer
 meta:
-  - name: 'description'
-    content: 'colw.io freelance developer site'
-  - name: 'keywords'
-    content: 'developer, react, software, freelancer, javascript, work, jobs'
-footer: '© 2018 Col'
+  - content: colw.io freelance developer site
+    name: description
+  - content: 'developer, react, software, freelancer, javascript, work, jobs'
+    name: keywords
+footer: © 2018 Col
 links:
-  - icon: 'fa pen-square'
+  - icon: fa pen-square
     link: 'https://colw.github.io/'
-    title: 'Blog'
-  - icon: 'fab github'
+    title: Blog
+  - icon: fab github
     link: 'https://www.github.com/colw'
-    title: 'Github'
-  - icon: 'fa envelope'
+    title: Github
+  - icon: fa envelope
     link: 'mailto:col@colw.io'
-    title: 'Email'
+    title: Email
 projects:
-  - image: 'images/localsolardeals.png'
+  - image: images/localsolardeals.png
     link: 'https://localsolardeals.com.au/'
     text: Responsive landing Page created with Gatsby.
     title: LocalSolarDeals
     year: '2019'
-  - title: 'DSTOQ Marketing Website'
+  - image: images/dstoq.png
     link: 'http://www.dstoq.com'
-    image: 'images/dstoq.png'
-    text: 'A Gatsby.js powered static site'
+    text: A Gatsby.js powered static site
+    title: DSTOQ Marketing Website
     year: '2018'
-  - title: 'ERGO B2B Site'
+  - image: images/ergo.png
     link: 'http://www.ergo.de'
-    image: 'images/ergo.png'
-    text: 'A B2B SPA built out of React for the ERGO Insurance company.'
-    year: '2017–2018'
-  - title: 'Lesara'
+    text: A B2B SPA built out of React for the ERGO Insurance company.
+    title: ERGO B2B Site
+    year: 2017–2018
+  - image: images/lesara.png
     link: 'http://corporate.lesara.com'
-    image: 'images/lesara.png'
-    text: >
+    text: |
       The official corporate site for Europe's premier online fashion retailer.
+    title: Lesara
     year: '2016'
-  - title: 'Triptello'
+  - image: images/triptello.png
     link: 'http://www.triptello.com'
-    image: 'images/triptello.png'
-    text: 'A digital travel agency. Front end completed using Angular and Bootstrap.'
-    year: '2015–2016'
-  - title: 'Ruminant'
+    text: A digital travel agency. Front end completed using Angular and Bootstrap.
+    title: Triptello
+    year: 2015–2016
+  - image: images/ruminant_ipad.png
     link: 'http://ruminant.press'
-    image: 'images/ruminant_ipad.png'
-    text: 'A news aggregator built using React and Node.js.'
+    text: A news aggregator built using React and Node.js.
+    title: Ruminant
     year: '2015'
-  - title: 'Lamedo'
+  - image: images/lighthouse.png
     link: 'https://www.facebook.com/lighthouseapp'
-    image: 'images/lighthouse.png'
-    text: 'An allergy food scanning app. Prototype created using the Ionic Framework.'
-    year: '2015'    
+    text: An allergy food scanning app. Prototype created using the Ionic Framework.
+    title: Lamedo
+    year: '2015'
 skills:
   - 'Javascript, ES6'
   - 'React, Redux'
-  - 'HTML5'
+  - 'Gatsby, Netlify CMS'
+  - HTML5
   - 'Styled-Components, SASS, CSS'
-  - 'Git + Github'
+  - Git + Github
   - 'CircleCI, Jenkins'
-  - 'Docker'
+  - Docker
   - 'AWS, Netlify'
-  - 'Firebase'
+  - Firebase
 ---
 
 **My name is Col**. I craft professional web sites using React.
 
-I have a degree in Computer Science, and I specialise in Javascript. I regularly use technologies like Git, Docker and CircleCI to assist in my work.
+I have a degree in Computer Science, and I specialise in Javascript. I regularly use technologies like Gatsby, Git, Docker and CircleCI to assist in my work.
 
 Please [contact me](mailto:col@colw.io) to talk about your project.

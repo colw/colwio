@@ -71,7 +71,7 @@ skills:
 ---
 **My name is Col**. I craft professional web sites using React.
 
-I have a degree in Computer Science, and I specialise in Javascript. I create well-tested and robust frontend solutions.
+I have a degree in Computer Science, and I specialise in Javascript and React. I create well-tested and robust frontend solutions.
 
 I regularly use technology such as Gatsby, Git, Docker and CircleCI to assist in my work.
 

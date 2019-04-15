@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
@@ -9,7 +10,7 @@ const MainPage = ({ data }) => {
     html,
     frontmatter: { footer, projects, skills },
   } = data.markdownRemark
-  console.log(data)
+
   return (
     <Layout>
       <section dangerouslySetInnerHTML={{ __html: html }} />
@@ -29,6 +30,10 @@ const MainPage = ({ data }) => {
       <footer>{footer}</footer>
     </Layout>
   )
+}
+
+MainPage.propTypes = {
+  data: PropTypes.object,
 }
 
 export default MainPage

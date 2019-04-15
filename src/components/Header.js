@@ -1,11 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faPenSquare, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Icon from './Icon'
 
 library.add(fab, faPenSquare, faEnvelope)
 
@@ -20,20 +22,6 @@ const HeaderWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
 `
-
-const IconWrapper = styled.div`
-  display: inline-block;
-  font-size: 2rem;
-  color: rgb(30, 174, 219);
-`
-
-const Icon = ({ title, link, icon }) => (
-  <IconWrapper>
-    <a href={link} aria-label={title}>
-      <FontAwesomeIcon icon={icon.split(' ')} />
-    </a>
-  </IconWrapper>
-)
 
 const MainTitle = styled.h1`
   padding: 0;
@@ -88,6 +76,12 @@ const Header = ({ siteTitle, subTitle, links }) => {
       </HeaderList>
     </HeaderWrapper>
   )
+}
+
+Header.propTypes = {
+  siteTitle: PropTypes.string,
+  subTitle: PropTypes.string,
+  links: PropTypes.array,
 }
 
 export default Header

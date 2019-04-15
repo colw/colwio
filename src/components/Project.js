@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import styled from 'styled-components'
 import Image from 'gatsby-image'
 
@@ -31,7 +33,7 @@ const Year = styled.small`
   padding-left: 0.5rem;
 `
 
-// Kludge so the images are not alignedin the center when scaling.
+// Kludge so the images are not aligned in the center when scaling.
 const alignTop = `
   img { object-position: top center !important; }
 `
@@ -41,7 +43,7 @@ const Project = ({ title, link, image, text, year }) => {
     <ProjectContainer>
       <ProjectName href={link} aria-label={title}>
         {title}
-      </ProjectName>{' '}
+      </ProjectName>
       {year && <Year>{year}</Year>}
       <a href={link} aria-label={title}>
         <ProjectImage
@@ -53,6 +55,14 @@ const Project = ({ title, link, image, text, year }) => {
       <p>{text}</p>
     </ProjectContainer>
   )
+}
+
+Project.propTypes = {
+  title: PropTypes.string,
+  link: PropTypes.string,
+  image: PropTypes.string,
+  text: PropTypes.string,
+  year: PropTypes.string,
 }
 
 export default Project

@@ -5,7 +5,10 @@ import Layout from '../components/Layout'
 import Project from '../components/Project'
 
 const MainPage = ({ data }) => {
-  const { html, frontmatter: { footer, projects, skills } } = data.markdownRemark
+  const {
+    html,
+    frontmatter: { footer, projects, skills },
+  } = data.markdownRemark
   console.log(data)
   return (
     <Layout>

@@ -74,16 +74,18 @@ const HeaderList = styled.ul`
 const Header = ({ siteTitle, subTitle, links }) => {
   return (
     <HeaderWrapper>
-        <MainTitle>
-          <Link to="/">
-            {siteTitle}
-        </Link><br />
+      <MainTitle>
+        <Link to="/">{siteTitle}</Link>
+        <br />
         <SubTitle>{subTitle}</SubTitle>
-        </MainTitle>
-        <HeaderList>
-          {links.map(x => <li key={x.title}><Icon {...x} /></li>)}
-        </HeaderList>
-
+      </MainTitle>
+      <HeaderList>
+        {links.map(x => (
+          <li key={x.title}>
+            <Icon {...x} />
+          </li>
+        ))}
+      </HeaderList>
     </HeaderWrapper>
   )
 }

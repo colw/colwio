@@ -37,18 +37,22 @@ const alignTop = `
 `
 
 const Project = ({ title, link, image, text, year }) => {
-  return (<ProjectContainer>
-    <ProjectName href={link} aria-label={title}>
-      {title}
-    </ProjectName>{' '}
-    {year && <Year>{year}</Year>}
-    <a href={link} aria-label={title}>
-      <ProjectImage css={alignTop} fluid={image.childImageSharp.fluid} alt={text} />
-    </a>
-    <p>{text}</p>
-  </ProjectContainer>
-  );
-
+  return (
+    <ProjectContainer>
+      <ProjectName href={link} aria-label={title}>
+        {title}
+      </ProjectName>{' '}
+      {year && <Year>{year}</Year>}
+      <a href={link} aria-label={title}>
+        <ProjectImage
+          css={alignTop}
+          fluid={image.childImageSharp.fluid}
+          alt={text}
+        />
+      </a>
+      <p>{text}</p>
+    </ProjectContainer>
+  )
 }
 
 export default Project

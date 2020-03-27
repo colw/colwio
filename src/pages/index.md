@@ -20,8 +20,8 @@ links:
     title: Email
 projects:
   - image: /images/lunieio.png
-    link: 'https://app.lunie.io'
-    text: Vue.js + Node.sj + GraphQL crypocurrnecy wallet.
+    link: 'https://lunie.io'
+    text: Vue.js + Node.js + GraphQL cryptocurrency wallet.
     title: Lunie.io
     year: '2019'
   - image: images/localsolardeals.png

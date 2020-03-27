@@ -57,6 +57,11 @@ projects:
     text: An allergy food scanning app. Prototype created using the Ionic Framework.
     title: Lamedo
     year: '2015'
+  - image: /images/lunieio.png
+    link: 'https://app.lunie.io'
+    text: Vue.js + Node.sj + GraphQL crypocurrnecy wallet.
+    title: Lunie.io
+    year: '2019'
 skills:
   - 'Javascript, ES6'
   - 'React, Redux'

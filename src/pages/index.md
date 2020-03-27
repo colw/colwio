@@ -19,7 +19,7 @@ links:
     link: 'mailto:col@colw.io'
     title: Email
 projects:
-  - image: /images/lunieio.png
+  - image: images/lunieio.png
     link: 'https://lunie.io'
     text: Vue.js + Node.js + GraphQL cryptocurrency wallet.
     title: Lunie.io

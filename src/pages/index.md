@@ -5,7 +5,7 @@ subTitle: Senior Software Developer
 meta:
   - content: colw.io freelance developer site
     name: description
-  - content: 'developer, react, software, freelancer, javascript, work, jobs'
+  - content: 'developer, react, graphql, software, freelancer, javascript, work, jobs'
     name: keywords
 footer: © 2018 Col
 links:
@@ -76,8 +76,6 @@ skills:
 ---
 **My name is Col**. I craft professional web sites using React.
 
-I have a degree in Computer Science, and I specialise in Javascript and React. I create well-tested and robust frontend solutions.
-
-I regularly use technology such as Gatsby, Git, Docker and CircleCI to assist in my work.
+I have a degree in Computer Science, and I specialise in Javascript, React and GraphQL. I create well-tested and robust frontend solutions.
 
 Please [contact me](mailto:col@colw.io) to talk about your project.

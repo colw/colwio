@@ -1,6 +1,6 @@
 ---
 templateKey: main-page
-title: Col
+title: Col — Software Developer
 subTitle: Software Developer
 meta:
   - content: colw.io freelance developer site
